@@ -85,6 +85,13 @@ pour répondre à diverses attentes et budgets.</p>
                     <div x-show="open" @click.away="open = false">
                 </a>
             </div>
+        <div x-data="{ open: false }">
+            <a href="rotterdam.html">
+                <button @click="open = true">De Rotterdam</button>
+                <img src="/public/img/photo(19).webp" alt="De Rotterdam" width="372px" height="183px" flex-shrink: 0>
+                <div x-show="open" @click.away="open = false">
+            </a>
+        </div>
     </body>
     <footer>
         <div>A propos</div>
