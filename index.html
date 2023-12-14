@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Structura</title>
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Italiana&family=Source+Serif+4:opsz@8..60&display=swap');
-  header {
-    background-color: #ffffff;
-    color:black;
-    font-family: 'Italiana', sans-serif;
-    font-size: 48px;
-    top: 0px; 
-    position: sticky;
-    padding: 20px 10px;
-  width: 375px;
-  height: 100px;
-  flex-shrink: 0;
-  display: flex;
- 
-  }
-  
-  logo {
+    <title>Document</title>
+</head>
+<style>
+header {
+background-color: #ffffff;
+color:black;
+font-family: 'Italiana', sans-serif;
+font-size: 48px;
+top: 0px;
+position: sticky;
+padding: 20px 10px;
+width: 375px;
+height: 100px;
+flex-shrink: 0;
+display: flex;
+
+}
+
+logo {
 color: #000;
 
 font-family: Italiana;
@@ -31,85 +30,54 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 text-transform: lowercase;
-  }
-  body {
-      background-color: #D7D7D7;
-      color: black;
-    }
+}
+body {
+background-color: #D7D7D7;
+color: black;
+}
 
-    h1 {
-    font-family: 'Italiana', sans-serif;
-      font-size: 24px;
-    }
+h1 {
+font-family: 'Italiana', sans-serif;
+font-size: 24px;
+}
 
-    h2 {
-    font-family: 'source Serif 4', serif;
-    font-size: 20px;
-      margin-top: 20px;
-    }
+h2 {
+font-family: 'source Serif 4', serif;
+font-size: 20px;
+margin-top: 20px;
+}
 
-    p {
-    font-family: 'Source Serif 4', serif;
-      margin-top: 20px;
-      font-size: 18px;
-    }
+p {
+font-family: 'Source Serif 4', serif;
+margin-top: 20px;
+font-size: 18px;
+}
 
-    menu {
-    width: 36px;
-  height: 36px;
-  flex-shrink: 0;;
-    }
+menu {
+width: 36px;
+height: 36px;
+flex-shrink: 0;;
+}
 
-    footer {
-    background-color: black;
-    color:white;
-    font-family: 'inter', sans-serif;
-    }
-    </style>
+footer {
+background-color: black;
+color:white;
+font-family: 'inter', sans-serif;
+position:fixed;
+bottom:0;
+width: 100%;
+}
+</style>
 </head>
 <header class="header">
     <img src="public/img/logo.svg" alt="structura" border="0" href="/">
-<logo>structura</logo>
+    <logo>structura</logo>
     <img src="/public/img/menu.svg" alt="menu" border="0" href="menu.html">
 </header>
 <body>
-    <h1>Structura</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<p>L'expo "Structura" dévoile la vision emblématique de Rem Koolhaas, fusionnant l'audace conceptuelle et la fonctionnalité
-pragmatique.
-<img src="public/img/photo(1).jpg" alt="photo" border="0" href="photo.html">
-
-Cette immersion dans son œuvre révolutionnaire explore l'intersection entre l'architecture, la société et la
-technologie, dévoilant des structures emblématiques et des idées novatrices qui redéfinissent notre perception de
-l'espace et de la forme.</p>
-<h2>Architecte mis à l’honneur</h2>
-<p>Rem Koolhaas</p>
-<h2>Découvrez son parcours</h2>
-<p>Explorez nos différentes offres et découvrez les prix adaptés à vos besoins. Nous avons conçu des forfaits flexibles
-pour répondre à diverses attentes et budgets.</p>
-    <div x-data="{ open: false }">
-        <button @click="open = true"> Découvrez nos tarifs</button>
-<h2>Les œuvres</h2>
-<div x-data="{ open: false }">
-    <button @click="open = true">CCTV HEADQUARTERS</button>
-    <div x-show="open" @click.away="open = false">
-    </div>
-    <div x-data="{ open: false }">
-        <button @click="open = true">Embassade des pays-bas à Berlin</button>
-        <div x-show="open" @click.away="open = false">
-        </div>
-        <div x-data="{ open: false }">
-            <button @click="open = true">Taipei arts center</button>
-            <div x-show="open" @click.away="open = false">
-            </div>
-            <div x-data="{ open: false }">
-                <button @click="open = true">Seoul National university</button>
-                <div x-show="open" @click.away="open = false">
-                </div>
-    </body>
-    <footer>
-        A propos
-        Infos & contact
-        <button>Billetterie</button>
-    </footer>
+    <h1>Choix de la langue</h1>
+    <h2>Choisissez votre langue</h2>
+    <a href="FR/index.html"><img src="public/icones/france.svg" alt="france" border="0" href="FR/index.html"></a>
+    <a href="EN/index.html"><img src="public/icones/gb.svg" alt="uk" border="0" href="EN/index.html"></a>
+</body>
 </html>
