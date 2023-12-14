@@ -7,7 +7,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Italiana&family=Source+Serif+4:opsz@8..60&display=swap');
-  header {
+header {
     background-color: #ffffff;
     color:black;
     font-family: 'Italiana', sans-serif;
@@ -15,12 +15,12 @@
     top: 0px; 
     position: sticky;
     padding: 20px 10px;
-  width: 375px;
-  height: 100px;
-  flex-shrink: 0;
-  display: flex;
- 
-  }
+    width: 375px;
+    height: 100px;
+    flex-shrink: 0;
+  display: flex;}
+  
+
 
     logo{
 color: #000;
@@ -70,7 +70,7 @@ text-transform: lowercase;}
     </style>
 </head>
 <header class="header">
-    <img src="public/img/logo.svg" alt="structura" border="0" href="/">
+    <img src="/public/img/logo.svg" alt="structura" border="0" href="/">
 <logo>structura</logo>
     <img src="/public/img/menu.svg" alt="menu" border="0" href="menu.html">
 </header>
@@ -89,8 +89,11 @@ l'espace et de la forme.</p>
 <h2>Découvrez son parcours</h2>
 <p>Explorez nos différentes offres et découvrez les prix adaptés à vos besoins. Nous avons conçu des forfaits flexibles
 pour répondre à diverses attentes et budgets.</p>
-    <div x-data="{ open: false }">
-        <button @click="open = true"> Découvrez nos tarifs</button>
+<div x-data="{ open: false }">
+  <a href="tarifs.html">
+    <button @click="open = true">Découvrez nos tarifs</button>
+  </a>
+</div>
 <h2>Les œuvres</h2>
 <div x-data="{ open: false }">
     <button @click="open = true">CCTV HEADQUARTERS</button>
