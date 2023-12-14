@@ -66,6 +66,14 @@ pour répondre à diverses attentes et budgets.</p>
             <div x-data="{ open: false }">
                 <a href="casa.html">
                     <button @click="open = true">Casa da musica</button>
+                    <img src="/public/img/photo(12).webp" alt="Casa da Música" width="372px" height="183px" flex-shrink: 0>
+                    <div x-show="open" @click.away="open = false">
+                </a>
+            </div>
+            <div x-data="{ open: false }">
+                <a href="campus.html">
+                    <button @click="open = true">McCormick Tribune Campus Center</button>
+                    <img src="/public/img/photo(15).webp" alt="McCormick Tribune Campus Center" width="372px" height="183px" flex-shrink: 0>
                     <div x-show="open" @click.away="open = false">
                 </a>
             </div>
