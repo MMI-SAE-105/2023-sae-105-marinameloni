@@ -193,8 +193,8 @@ header {
     z-index: 100;
 
 }
-.bouton__embassade {
-    top: 2025px;
+.bouton__taipei {
+    top: 2235px;
     left: 43px;
     position: absolute;
     width: 288px;
@@ -211,4 +211,44 @@ header {
     text-decoration-line: underline;
     z-index: 100;
 
+}
+
+.bouton__seoul {
+        top: 2420px;
+        left: 43px;
+        position: absolute;
+        width: 288px;
+        color: #FFF;
+        text-shadow: #000 10px 10px 10px;
+
+
+        text-align: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Italiana;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+        z-index: 100;
+}
+
+.bouton__casa {
+    top: 2600px;
+    left: 43px;
+    position: absolute;
+    width: 288px;
+    color: #FFF;
+    text-shadow: #000 10px 10px 10px;
+
+
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Italiana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    z-index: 100;
 }
