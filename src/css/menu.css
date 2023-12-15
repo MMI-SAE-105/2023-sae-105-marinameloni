@@ -1,0 +1,150 @@
+.menu {
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--black-site);
+    transition: all .4s ease-in-out;
+}
+.menu--open {
+    visibility: visible;
+    opacity: 1;
+    background-color: var(--black-site);
+    width: 100%;
+    margin-top: 81px;
+}
+.menulist {
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    color: var(--white--text);
+}
+
+.menuitem {
+    margin-top: 15%;
+}
+.menulink {
+    color: var(--white-site);
+    text-decoration: none;
+}
+
+.menu-btn {
+    position: relative;
+    z-index: 12;
+    width: 30px;
+    background: var(--white-site);
+    border: 0;
+}
+
+.menu-btnbar,
+
+.menu-btnbar::before,
+
+.menu-btnbar::after {
+    content: '';
+    background: var(--black-site);
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 12;
+    transition: all .4s ease-in-out;
+}
+
+.menu-btnbar::before {
+    top: -10px;
+    z-index: 12;
+}
+
+.menu-btnbar::after {
+    top: 10px;
+    z-index: 12;
+}
+
+.menu-btn--open .menu-btnbar,
+.menu-btn--open .menu-btnbar::before,
+.menu-btn--open .menu-btnbar::after {
+    transform: rotate(135deg);
+}
+
+.menu-btn--open .menu-btnbar::before,
+.menu-btn--open .menu-btn__bar::after {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.menu-btn:not(.menu-btn--open) .menu-btnbar,
+.menu-btn:not(.menu-btn--open) .menu-btnbar::before,
+.menu-btn:not(.menu-btn--open) .menu-btnbar::after {
+    background-color: var(--black-site);
+}
+
+.menuitem_primary {
+    color: var(--white-site);
+    font-family: var(--font-website);
+    font-size: var(--heading-2);
+    font-weight: 500;
+    padding-top: 2rem;
+}
+
+.menu__item_secondary {
+    color: var(--white-site);
+    font-family: var(--font-website);
+    font-size: var(--heading-3);
+    display: inline-block;
+    padding-top: 3rem;
+    margin-left: 15%;
+}
+
+.header {
+    background-color: var(--blanc);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 81px;
+    z-index: 3;
+    padding: 2px var(--space3x);
+    display: flex;
+    justify-content: space-between;
+    transition: all .3s ease-in-out;
+    vertical-align: middle;
+}
+
+.headerend {
+    position: absolute;
+    gap: var(--space2x);
+    display: flex;
+    right: 0;
+    margin-top: 40px;
+    margin-right: 20px;
+
+}
+
+.headerlink-logo {
+    text-decoration: none;
+    color: var(--noir);
+}
+
+.headerlogo-text {
+    font-family: var(--font-website);
+    font-size: var(--title);
+    font-weight: 700;
+    text-align: center;
+}
+
+.headerlogo {
+    width: 100%;
+}
+
+.header__logo-lang {
+    margin-top: 25px;
+    width: 48px;
+    height: 32px;
+    position: relative;
+}
