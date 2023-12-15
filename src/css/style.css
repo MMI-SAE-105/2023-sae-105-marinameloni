@@ -58,7 +58,7 @@ header {
         ;
     }
 
-    footer {
+    .footer {
         background-color: black;
         color: white;
         font-family: 'inter', sans-serif;
@@ -240,6 +240,60 @@ header {
     width: 288px;
     color: #FFF;
     text-shadow: #000 10px 10px 10px;
+
+
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Italiana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    z-index: 100;
+}
+.bouton__campus {
+    top: 2780px;
+    left: 43px;
+    position: absolute;
+    width: 288px;
+    color: #FFF;
+
+
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Italiana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    z-index: 100;
+}
+.bouton__qatar {
+    top: 3000px;
+    left: 43px;
+    position: absolute;
+    width: 288px;
+    color: #FFF;
+
+
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Italiana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    z-index: 100;
+}
+.bouton__rotterdam {
+    top: 3150px;
+    left: 43px;
+    position: absolute;
+    width: 288px;
+    color: #FFF;
 
 
     text-align: center;
