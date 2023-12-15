@@ -19,7 +19,7 @@ header {
 
 
 
-    logo {
+    .logo {
         color: #000;
         font-family: Italiana;
         font-size: 32px;
@@ -144,6 +144,4 @@ header {
 
 .caroussel_liste-liens li {
     scroll-snap-align: start;
-}
-
-justify-content:center;
+};
