@@ -2,38 +2,11 @@
        width: 100%;
        overflow: hidden;
        border: 5px solid #dedede;
-
    }
-   .accordion_1 {
-       width: 100%;
-       overflow: hidden;
-       border: 5px solid #dedede;
-       color: white;
-       background-image: url(/public/img/photo\(23\).webp);
-    }
-       .accordion_2 {
-       width: 100%;
-       overflow: hidden;
-       border: 5px solid #dedede;
-       color: white;
-       background-image: url(/public/img/photo\(16\).webp);
-    }
-
-     .accordion_3 {
-       width: 100%;
-       overflow: hidden;
-       border: 5px solid #dedede;
-       color: white;
-       background-image: url(/public/img/photo\(12\).webp);
-    }
 
    .accordion:hover .panel {
        max-height: 500px;
    }
-   
-        .accordion_1:hover .panel {
-            max-height: 500px;
-        }
 
    .panel {
        max-height: 0;
