@@ -1,20 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" x-data="{menuIsOpen: false}">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embassade</title>
-    <script src="//unpkg.com/alpinejs" defer></script>
-        <link href="../src/css/style.css" rel="stylesheet">
+    <title>Structura</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <link href="../src/css/style.css" rel="stylesheet">
+    <link href="../src/css/menu.css" rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <a href="index.html">
-            <img src="../public/img/logo.svg" alt="structura" border="0" href="/FR/index.html">
+            <img src="../public/img/logo.svg" alt="structura" width="50px">
         </a>
         <logo>structura</logo>
-        <img src="/public/img/menu.svg" alt="menu" border="0" href="menu.html">
+        <img src="/public/img/menu.svg" alt="menu" aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen"
+            class="header__menuBtn">
+        <div id="mainNav" x-show="menuIsOpen" x-transition:duration.1300ms class="menu">
+            <nav>
+                <h1>Structura</h1> <img src="/public/icones/logowhite.png" alt="structura">
+                <img src="/public/icones/close.svg" alt="close" aria-controls="mainNav"
+                    @click="menuIsOpen = !menuIsOpen">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <hr>
+                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <hr>
+                    <li><a href="architecte.html">Architecte</a></li>
+                    <hr>
+                    <li><a href="frise.html">Frise</a></li>
+                    <hr>
+                </ul>
+            </nav>
+        </div>
     </header>
+</body>
+<body>
     <h1>Embassade des pays bas à Berlin</h1>
     <p> Élégante, moderne, représentative.</p>
     <img src="/public/img/photo(4).jpg" alt="Embassade" width="375" height="250">
