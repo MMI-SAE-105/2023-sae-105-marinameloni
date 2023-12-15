@@ -1,5 +1,5 @@
 .accordion {
-       width: 200px;
+       width: 100%;
        overflow: hidden;
        border: 5px solid #dedede;
    }
