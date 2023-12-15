@@ -3,10 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../src/css/style.css" rel="stylesheet">
+    <link href="../src/css/frise.css" rel="stylesheet">
     <title>Frise</title>
 </head>
+<header class="header">
+    <img src="/public/img/logo.svg" alt="structura" border="0">
+    <logo>structura</logo>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menu">
+        <img src="/public/img/menu.svg" alt="menu" border="0">
+    </button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition:duration.1300ms class="menu">
+    </nav>
+</header>
+
 <body>
-    
+<h1>Ses oeuvres dans l'ordre chronologique</h1>
+    <div class="accordion">
+        <div class="panel">
+                <p>2001 Seattle Central Library</p>
+        </div>
+    </div>
+    <div class="accordion">
+        <div class="panel">
+            <p>2003 McCormick Tribune Campus Center à Chicago</p>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="panel">
+            <p>2005 Casa da Música à Porto</p>
+        </div>
+        <div class="accordion">
+            <div class="panel">
+                <p>2013 De Rotterdam</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="panel">
+                <p>2017 Qatar National Library à Doha</p>
+            </div>
+        </div>  
 </body>
     <footer>
         <a href="a-propos.html"> A propos</a>

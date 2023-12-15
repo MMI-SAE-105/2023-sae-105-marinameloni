@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Structura</title>
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="unpkg.com/alpinejs" defer></script>
     <link href="../src/css/style.css" rel="stylesheet">
 
 </head>
 <header class="header">
-    <img src="/public/img/logo.svg" alt="structura" border="0" href="/">
-<logo>structura</logo>
-    <img src="/public/img/menu.svg" alt="menu" border="0" href="menu.html">
+    <img src="/public/img/logo.svg" alt="structura" border="0">
+    <logo>structura</logo>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menu">
+        <img src="/public/img/menu.svg" alt="menu" border="0">
+    </button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition:duration.1300ms class="menu">
+    </nav>
 </header>
 <body>
     <h1>Structura</h1>
