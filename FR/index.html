@@ -41,8 +41,16 @@
 </body>
 
 <body>
+<div x-data="{ active: 0 }" x-init="setInterval(() => active = (active + 1) % 2, 3000)">
+    <div class="carousel">
+        <div x-show="active === 0">
             <img src="/public/img/photo(1).webp" alt="photo" border="0" width="350px">
+        </div>
+        <div x-show="active === 1">
             <img src="/public/img/photo(2).webp" alt="photo" border="0" width="350px">
+        </div>
+    </div>
+</div>
     <h1>Structura</h1>
     <p>Une exposition d'architecture</p>
     <p>L'expo "Structura" dévoile la vision emblématique de Rem Koolhaas, fusionnant l'audace conceptuelle et la
