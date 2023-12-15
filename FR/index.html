@@ -43,10 +43,10 @@
 <body>
 <div x-data="{ active: 0 }" x-init="setInterval(() => active = (active + 1) % 2, 3000)">
     <div class="carousel">
-        <div x-show="active === 0">
+        <div x-show="active === 0" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
             <img src="/public/img/photo(1).webp" alt="photo" border="0" width="350px">
         </div>
-        <div x-show="active === 1">
+        <div x-show="active === 1" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
             <img src="/public/img/photo(2).webp" alt="photo" border="0" width="350px">
         </div>
     </div>
