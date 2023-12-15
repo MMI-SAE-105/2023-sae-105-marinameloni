@@ -1,94 +1,133 @@
-<!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{menuIsOpen: false}">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Structura</title>
-    <script src="unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
     <link href="../src/css/style.css" rel="stylesheet">
-
+    <style>
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: black;
+            display: grid;
+            place-content: center;
+        }
+        .header__menu {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
 </head>
-<header class="header">
-    <img src="/public/img/logo.svg" alt="structura" border="0">
-    <logo>structura</logo>
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menu">
-        <img src="/public/img/menu.svg" alt="menu" border="0">
-    </button>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition:duration.1300ms class="menu">
-    </nav>
-</header>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img src="../public/img/logo.svg" alt="structura">
+        </a>
+        <logo>structura</logo>
+        <img src="/public/img/menu.svg" alt="menu" aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen"
+            class="header__menuBtn">
+        <div id="mainNav" x-show="menuIsOpen" x-transition:duration.1300ms class="menu">
+            <nav>
+                <h1>Structura</h1>
+                <img src="/public/icones/close.svg" alt="close" aria-controls="mainNav"
+                    @click="menuIsOpen = !menuIsOpen">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">A propos</a></li>
+                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="architecte.html">Architecte</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+
+</html>
 <body>
     <h1>Structura</h1>
-<p>Une exposition d'architecture</p>
-<p>L'expo "Structura" dévoile la vision emblématique de Rem Koolhaas, fusionnant l'audace conceptuelle et la fonctionnalité
-pragmatique.
-<img src="/public/img/photo(1).webp" alt="photo" border="0">
+    <p>Une exposition d'architecture</p>
+    <p>L'expo "Structura" dévoile la vision emblématique de Rem Koolhaas, fusionnant l'audace conceptuelle et la
+        fonctionnalité
+        pragmatique.
+        <img src="/public/img/photo(1).webp" alt="photo" border="0">
 
-Cette immersion dans son œuvre révolutionnaire explore l'intersection entre l'architecture, la société et la
-technologie, dévoilant des structures emblématiques et des idées novatrices qui redéfinissent notre perception de
-l'espace et de la forme.</p>
-<h2>Architecte mis à l’honneur</h2>
-<a href="architecte.html">Rem Koolhaas</a>
-<img src="/public/img/photo(5).webp" alt="Rem Koolhaas" border="0" href="photo.html">
-<h2>Découvrez son parcours</h2>
-<p>Explorez nos différentes offres et découvrez les prix adaptés à vos besoins. Nous avons conçu des forfaits flexibles
-pour répondre à diverses attentes et budgets.</p>
-<div x-data="{ open: false }">
-  <a href="tarifs.html">
-    <button @click="open = true">Découvrez nos tarifs</button>
-  </a>
-</div>
-<h2>Les œuvres</h2>
-<div x-data="{ open: false }">
-    <a href="CCTV.html">
-    <button @click="open = true">CCTV HEADQUARTERS</button>
-    <img src="/public/img/photo(2).webp" alt="CCTV Headquarters" width="372px" height="183px" flex-shrink: 0>
-    </a>
-    <div x-show="open" @click.away="open = false">
-    </div>
+        Cette immersion dans son œuvre révolutionnaire explore l'intersection entre l'architecture, la société et la
+        technologie, dévoilant des structures emblématiques et des idées novatrices qui redéfinissent notre perception
+        de
+        l'espace et de la forme.
+    </p>
+    <h2>Architecte mis à l’honneur</h2>
+    <a href="architecte.html">Rem Koolhaas</a>
+    <img src="/public/img/photo(5).webp" alt="Rem Koolhaas" border="0" href="photo.html">
+    <h2>Découvrez son parcours</h2>
+    <p>Explorez nos différentes offres et découvrez les prix adaptés à vos besoins. Nous avons conçu des forfaits
+        flexibles
+        pour répondre à diverses attentes et budgets.</p>
     <div x-data="{ open: false }">
-          <a href="embassade.html">
-        <button @click="open = true">Embassade des pays-bas à Berlin</button>
-                <img src="/public/img/photo(3).webp" alt="Embassade" width="372px" height="183px" flex-shrink: 0>
-        <div x-show="open" @click.away="open = false">
+        <a href="tarifs.html">
+            <button @click="open = true">Découvrez nos tarifs</button>
         </a>
+    </div>
+    <h2>Les œuvres</h2>
+    <div x-data="{ open: false }">
+        <a href="CCTV.html">
+            <button @click="open = true">CCTV HEADQUARTERS</button>
+            <img src="/public/img/photo(2).webp" alt="CCTV Headquarters" width="372px" height="183px" flex-shrink: 0>
+        </a>
+        <div x-show="open" @click.away="open = false">
+        </div>
+        <div x-data="{ open: false }">
+            <a href="embassade.html">
+                <button @click="open = true">Embassade des pays-bas à Berlin</button>
+                <img src="/public/img/photo(3).webp" alt="Embassade" width="372px" height="183px" flex-shrink: 0>
+                <div x-show="open" @click.away="open = false">
+            </a>
         </div>
         <div x-data="{ open: false }">
             <a href="taipei.html">
-            <button @click="open = true">Taipei arts center</button>
-            <img src="/public/img/photo(7).webp" alt="Taipei performing arts center" width="372px" height="183px" flex-shrink: 0>
-            <div x-show="open" @click.away="open = false">
-                </a>
-            </div>
-            <div x-data="{ open: false }">
-                <a href="seoul.html">
-                <button @click="open = true">Seoul National university</button>
-                <img src="/public/img/photo(8).webp" alt="Seoul National university" width="372px" height="183px" flex-shrink: 0>
+                <button @click="open = true">Taipei arts center</button>
+                <img src="/public/img/photo(7).webp" alt="Taipei performing arts center" width="372px" height="183px"
+                    flex-shrink: 0>
                 <div x-show="open" @click.away="open = false">
-                </a>
-                </div>
-            <div x-data="{ open: false }">
-                <a href="casa.html">
-                    <button @click="open = true">Casa da musica</button>
-                    <img src="/public/img/photo(12).webp" alt="Casa da Música" width="372px" height="183px" flex-shrink: 0>
-                    <div x-show="open" @click.away="open = false">
-                </a>
-            </div>
-            <div x-data="{ open: false }">
-                <a href="campus.html">
-                    <button @click="open = true">McCormick Tribune Campus Center</button>
-                    <img src="/public/img/photo(15).webp" alt="McCormick Tribune Campus Center" width="372px" height="183px" flex-shrink: 0>
-                    <div x-show="open" @click.away="open = false">
-                </a>
-            </div>
-            <div x-data="{ open: false }">
-                <a href="qatar.html">
-                    <button @click="open = true">Qatar National Library</button>
-                    <img src="/public/img/photo(17).webp" alt="Qatar National Library" width="372px" height="183px"
-                        flex-shrink: 0>
-                    <div x-show="open" @click.away="open = false">
-                </a>
-            </div>
+            </a>
+        </div>
+        <div x-data="{ open: false }">
+            <a href="seoul.html">
+                <button @click="open = true">Seoul National university</button>
+                <img src="/public/img/photo(8).webp" alt="Seoul National university" width="372px" height="183px"
+                    flex-shrink: 0>
+                <div x-show="open" @click.away="open = false">
+            </a>
+        </div>
+        <div x-data="{ open: false }">
+            <a href="casa.html">
+                <button @click="open = true">Casa da musica</button>
+                <img src="/public/img/photo(12).webp" alt="Casa da Música" width="372px" height="183px" flex-shrink: 0>
+                <div x-show="open" @click.away="open = false">
+            </a>
+        </div>
+        <div x-data="{ open: false }">
+            <a href="campus.html">
+                <button @click="open = true">McCormick Tribune Campus Center</button>
+                <img src="/public/img/photo(15).webp" alt="McCormick Tribune Campus Center" width="372px" height="183px"
+                    flex-shrink: 0>
+                <div x-show="open" @click.away="open = false">
+            </a>
+        </div>
+        <div x-data="{ open: false }">
+            <a href="qatar.html">
+                <button @click="open = true">Qatar National Library</button>
+                <img src="/public/img/photo(17).webp" alt="Qatar National Library" width="372px" height="183px"
+                    flex-shrink: 0>
+                <div x-show="open" @click.away="open = false">
+            </a>
+        </div>
         <div x-data="{ open: false }">
             <a href="rotterdam.html">
                 <button @click="open = true">De Rotterdam</button>
@@ -96,10 +135,11 @@ pour répondre à diverses attentes et budgets.</p>
                 <div x-show="open" @click.away="open = false">
             </a>
         </div>
-    </body>
-    <footer>
-       <a href="a-propos.html"> A propos</a>
-        <div><a href="a-propos.html"> Infos et contact</a>
+</body>
+<footer>
+    <a href="a-propos.html"> A propos</a>
+    <div><a href="a-propos.html"> Infos et contact</a>
         <a href="https:ticketmaster.com"><button>Billetterie </a></button>
-    </footer>
+</footer>
+
 </html>

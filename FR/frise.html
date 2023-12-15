@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../src/css/style.css" rel="stylesheet">
-    <link href="../src/css/frise.css" rel="stylesheet">
-    <title>Frise</title>
+    <style>
+        .accordion {
+            width: 300px;
+            overflow: hidden;
+            border: 5px solid #ccc;
+        }
+
+        .accordion:hover .panel {
+            max-height: 500px;
+        }
+
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
 </head>
-<header class="header">
-    <img src="/public/img/logo.svg" alt="structura" border="0">
-    <logo>structura</logo>
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menu">
-        <img src="/public/img/menu.svg" alt="menu" border="0">
-    </button>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition:duration.1300ms class="menu">
-    </nav>
-</header>
 
 <body>
 <h1>Ses oeuvres dans l'ordre chronologique</h1>
@@ -43,7 +49,9 @@
             <div class="panel">
                 <p>2017 Qatar National Library à Doha</p>
             </div>
-        </div>  
+</body>
+
+</html>
 </body>
     <footer>
         <a href="a-propos.html"> A propos</a>
