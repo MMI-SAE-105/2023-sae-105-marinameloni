@@ -44,19 +44,19 @@
 <div x-data="{ active: 0 }" x-init="setInterval(() => active = (active + 1) % 2, 3000)">
     <div class="carousel">
         <div x-show="active === 0" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-            <img src="/public/img/photo(1).webp" alt="photo" border="0" width="375px">
+            <img src="/public/img/photo(1).webp" alt="photo" border="0" width="375px" height: 401px>
         </div>
         <div x-show="active === 1" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-            <img src="/public/img/photo(2).webp" alt="photo" border="0" width="375px">
+            <img src="/public/img/photo(2).webp" alt="photo" border="0" width="375px" height: 401px>
         </div>
     </div>
 </div>
-    <h1>Structura</h1>
-    <p>Une exposition d'architecture</p>
-    <p>L'expo "Structura" dévoile la vision emblématique de Rem Koolhaas, fusionnant l'audace conceptuelle et la
+    <h1 class="frontpageh1">Structura</h1>
+    <p class="sous-texte">Une exposition d'architecture</p>
+    <p class="sous-texte">L'expo "Structura" dévoile la vision emblématique de Rem Koolhaas, fusionnant l'audace conceptuelle et la
         fonctionnalité
         pragmatique. </p>
-        <p>
+        <p class="sous-texte">
         Cette immersion dans son œuvre révolutionnaire explore l'intersection entre l'architecture, la société et la
         technologie, dévoilant des structures emblématiques et des idées novatrices qui redéfinissent notre perception
         de
