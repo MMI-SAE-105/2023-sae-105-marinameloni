@@ -1,93 +1,56 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" x-data="{menuIsOpen: false}">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Structura</title>
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter&family=Italiana&family=Source+Serif+4:opsz@8..60&display=swap');
-
-        header {
-            background-color: #ffffff;
-            color: black;
-            font-family: 'Italiana', sans-serif;
-            font-size: 48px;
-            top: 0px;
-            position: sticky;
-            padding: 20px 10px;
-            width: 375px;
-            height: 100px;
-            flex-shrink: 0;
-            display: flex;
-        }
-
-        logo {
-            color: #000;
-            font-family: Italiana;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            text-transform: lowercase;
-        }
-
-        body {
-            background-color: #D7D7D7;
-            color: black;
-        }
-
-        h1 {
-            font-family: 'Italiana', sans-serif;
-            font-size: 24px;
-        }
-
-        h2 {
-            font-family: 'source Serif 4', serif;
-            font-size: 20px;
-            margin-top: 20px;
-        }
-
-        p {
-            font-family: 'Source Serif 4', serif;
-            margin-top: 20px;
-            font-size: 18px;
-        }
-
-        menu {
-            width: 36px;
-            height: 36px;
-            flex-shrink: 0;
-            ;
-        }
-
-        footer {
-            background-color: black;
-            color: white;
-            font-family: 'inter', sans-serif;
-            position: bottom;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <link href="../src/css/style.css" rel="stylesheet">
+    <link href="../src/css/menu.css" rel="stylesheet">
 </head>
-<header class="header">
-    <img src="public/img/logo.svg" alt="structura" border="0" href="/">
-    <logo>structura</logo>
-    <img src="/public/img/menu.svg" alt="menu" border="0" href="menu.html">
-</header>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img src="../public/img/logo.svg" alt="structura" width="50px">
+        </a>
+        <logo>structura</logo>
+        <img src="/public/img/menu.svg" alt="menu" aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen"
+            class="header__menuBtn">
+        <div id="mainNav" x-show="menuIsOpen" x-transition:duration.1300ms class="menu">
+            <nav>
+                <h1>Structura</h1> <img src="/public/icones/logowhite.png" alt="structura">
+                <img src="/public/icones/close.svg" alt="close" aria-controls="mainNav"
+                    @click="menuIsOpen = !menuIsOpen">
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <hr>
+                    <li><a href="tarifs.html">Prices</a></li>
+                    <hr>
+                    <li><a href="architecte.html">Architect</a></li>
+                    <hr>
+                    <li><a href="frise.html">Timeline</a></li>
+                    <hr>
+                    <li><a href="https:ticketmaster.com">Get your tickets</a></li>
+                    <hr>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
 
 <body>
     <h1>Structura</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>An Architecture Exposition</p>
     <p>The “Structura” exhibition unveils Rem Koolhaas’ iconic vision, merging conceptual audacity and pragmatic functionality.
-        <img src="public/img/photo(1).jpg" alt="photo" border="0" href="photo.html">
+        <img src="public/img/photo(1).webp" alt="photo" border="0" href="photo.html">
 
     This immersion into his groundbreaking work explores the intersection between architecture, society and technology,
     unveiling iconic structures and innovative ideas that redefine our perception of space and form.
     </p>
     <h2>Architect put in the spotlight</h2>
+    <img src="public/img/photo(5).webp" alt="photo" border="0" href="photo.html">
     <p>Rem Koolhaas</p>
     <h2>Discover his journey</h2>
     <p>Explore our different offers and discover the prices adapted to your needs. We have designed flexible packages to meet
