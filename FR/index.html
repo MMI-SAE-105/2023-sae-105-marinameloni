@@ -41,14 +41,28 @@
 </body>
 
 <body>
-<div x-data="{ active: 0 }" x-init="setInterval(() => active = (active + 1) % 2, 3000)">
-    <div class="carousel">
-        <div x-show="active === 0" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-            <img src="/public/img/photo(1).webp" alt="photo" border="0" width="375px" height: 401px>
-        </div>
-        <div x-show="active === 1" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-            <img src="/public/img/photo(2).webp" alt="photo" border="0" width="375px" height: 401px>
-        </div>
+<div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+    <div class="carrousel_parent-ecrans" x-ref="parent">
+        <button class="carrousel_btn carrousel_btn-avant" aria-label="slide"
+            @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+            < </button>
+                <button class="carrousel_btn carrousel_btn-apres" aria-label="next slide"
+                    @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">> </button>
+                <div id="ecran-1" class="carrousel_ecran">
+                    <figure>
+                        <img src="/public/img/photo(1).webp" width="375px" height="375px" alt="image ecran 1">
+                    </figure>
+                </div>
+                <div id="ecran-2" class="carrousel_ecran">
+                    <figure>
+                        <img src="/public/img/photo(2).webp" width="375px" height="375px"  alt="image ecran 2">
+                    </figure>
+                </div>
+                <div id="ecran-3" class="carrousel_ecran">
+                    <figure>
+                        <img src="/public/img/photo(3).webp" width="375px" height="375px" alt="image ecran 3">
+                    </figure>
+                </div>
     </div>
 </div>
     <h1 class="frontpageh1">Structura</h1>
