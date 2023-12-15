@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,56 @@
         }
     </style>
 </head>
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}">
 
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structura</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <link href="../src/css/style.css" rel="stylesheet">
+    <style>
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: black;
+            display: grid;
+            place-content: center;
+            color: white;
+            
+        }
+        .header__menu {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+    <header class="header">
+        <a href="index.html">
+            <img src="../public/img/logo.svg" alt="structura">
+        </a>
+        <logo>structura</logo>
+        <img src="/public/img/menu.svg" alt="menu" aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen"
+            class="header__menuBtn">
+        <div id="mainNav" x-show="menuIsOpen" x-transition:duration.1300ms class="menu">
+            <nav>
+                <h1>Structura</h1>
+                <img src="/public/icones/close.svg" alt="close" aria-controls="mainNav"
+                    @click="menuIsOpen = !menuIsOpen">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="architecte.html">Architecte</a></li>
+                    <li><a href="frise">Frise</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 <body>
 <h1>Ses oeuvres dans l'ordre chronologique</h1>
     <div class="accordion">
