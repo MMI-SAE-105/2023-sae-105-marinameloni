@@ -44,10 +44,10 @@
 <div x-data="{ active: 0 }" x-init="setInterval(() => active = (active + 1) % 2, 3000)">
     <div class="carousel">
         <div x-show="active === 0" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-            <img src="/public/img/photo(1).webp" alt="photo" border="0" width="350px">
+            <img src="/public/img/photo(1).webp" alt="photo" border="0" width="375px">
         </div>
         <div x-show="active === 1" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-1000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-            <img src="/public/img/photo(2).webp" alt="photo" border="0" width="350px">
+            <img src="/public/img/photo(2).webp" alt="photo" border="0" width="375px">
         </div>
     </div>
 </div>
@@ -66,7 +66,8 @@
     </p>
     <h2>Architecte mis à l’honneur</h2>
     <a href="architecte.html">Rem Koolhaas</a>
-    <img src="/public/img/photo(5).webp" alt="Rem Koolhaas" border="0" href="photo.html" width="350px">
+    <br>
+    <img src="/public/img/photo(5).webp" alt="Rem Koolhaas" border="0" href="photo.html" width="375px">
     <h2>Découvrez son parcours</h2>
     <p>Explorez nos différentes offres et découvrez les prix adaptés à vos besoins. Nous avons conçu des forfaits flexibles pour répondre à diverses attentes et budgets.</p>
     <div x-data="{ open: false }">
