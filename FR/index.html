@@ -93,14 +93,14 @@
     <h2>Les œuvres</h2>
     <div x-data="{ open: false }">
         <a href="CCTV.html">
-            <button @click="open = true">CCTV HEADQUARTERS</button>
-            <img src="/public/img/photo(2).webp" alt="CCTV Headquarters" width="372px" height="183px" flex-shrink: 0>
+            <p class="bouton">CCTV HEADQUARTERS</p>
+            <img src="/public/img/photo(2).webp" alt="CCTV Headquarters" width="372px" height="183px" flex-shrink: 0 class="image">
         </a>
         <div x-show="open" @click.away="open = false">
         </div>
         <div x-data="{ open: false }">
             <a href="embassade.html">
-                <button @click="open = true">Embassade des pays-bas à Berlin</button>
+                <p class="bouton__embassade">Embassade des pays-bas à Berlin</p>
                 <img src="/public/img/photo(3).webp" alt="Embassade" width="372px" height="183px" flex-shrink: 0>
                 <div x-show="open" @click.away="open = false">
             </a>

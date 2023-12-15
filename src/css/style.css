@@ -144,4 +144,71 @@ header {
 
 .caroussel_liste-liens li {
     scroll-snap-align: start;
-};
+}
+
+.image {
+    position: relative;
+    width:"372px"; 
+    height:"183px";
+    flex-shrink: 0;
+    z-index: -100;
+}
+
+.bouton {
+    top: 1850px;
+    left: 43px;
+    position: absolute;
+    width: 288px;
+    color: #FFF;
+    
+    
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Italiana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    z-index: 100;
+
+}
+
+.bouton__embassade {
+    top: 2025px;
+    left: 43px;
+    position: absolute;
+    width: 288px;
+    color: #FFF;
+
+
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Italiana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    z-index: 100;
+
+}
+.bouton__embassade {
+    top: 2025px;
+    left: 43px;
+    position: absolute;
+    width: 288px;
+    color: #FFF;
+
+
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Italiana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    z-index: 100;
+
+}
