@@ -58,14 +58,37 @@ header {
         ;
     }
 
-    .footer {
-        background-color: black;
-        color: white;
-        font-family: 'inter', sans-serif;
-        position: bottom;
-        bottom: 0;
-        width: 100vw;
-    }
+ .footer {
+     background-color: black;
+     color: white;
+     font-family: 'inter', sans-serif;
+     position: bottom;
+     bottom: 0;
+     width: 100vw;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px;
+    text-decoration: none;
+ }
+
+ .billetterie--bouton {
+    text-decoration: none;
+     background-color: #000000;
+     color: #ffffff;
+     font-family: 'inter', sans-serif;
+     font-size: 18px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     text-align: center;
+     text-decoration-line: white;
+     width: 288px;
+     height: 48px;
+     border: 2px solid #ffffff;
+     margin-top: 20px;
+     margin-left: 40px;
+ }
 .sous-texte {
     text-align: center;
 }
